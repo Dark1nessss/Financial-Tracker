@@ -20,7 +20,7 @@ const userSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     }
-});
+}, { collection: 'Users' });
 
 // Method to match entered password with hashed password
 userSchema.methods.matchPassword = async function (enteredPassword) {
