@@ -1,4 +1,3 @@
-const Counter = require('../models/counterModel');
 const User = require('../models/userModel');
 const bcrypt = require('bcryptjs');
 
@@ -46,40 +45,46 @@ const getUsers = async (req, res) => {
 // Create a new user
 const createUser = async (req, res) => {
     const { name, email, password } = req.body;
-
+  
     // Password validation
     const passwordPattern = /^(?=.*[!@#\$%\^&\*])[A-Za-z\d!@#\$%\^&\*]{8,}$/;
     if (!password.match(passwordPattern)) {
-        return res.status(400).json({ message: 'Password must be at least 8 characters long and contain at least one special character' });
+      return res.status(400).json({ message: 'Password must be at least 8 characters long and contain at least one special character' });
     }
-
+  
     try {
-        // Check if the user already exists
-        const existingUser = await User.findOne({ email });
-        if (existingUser) {
-            return res.status(400).json({ message: 'User already exists' });
-        }
-
-        // Hash the password
-        const salt = await bcrypt.genSalt(10);
-        const passwordHash = await bcrypt.hash(password, salt);
-
-        // Get the next userId
-        const userId = await getNextUserId();
-
-        // Create a new user
-        const newUser = new User({
-            name,
-            email,
-            passwordHash,
-            userId
-        });
-
-        await newUser.save();
-        res.status(201).json(newUser);
+      // Check if the user already exists
+      const existingUser = await User.findOne({ email });
+      if (existingUser) {
+        return res.status(400).json({ message: 'User already exists' });
+      }
+  
+      // Hash the password
+      const salt = await bcrypt.genSalt(10);
+      const passwordHash = await bcrypt.hash(password, salt);
+  
+      // Generate a unique 7-8 digit random userId
+      let userId;
+      let userExists;
+      do {
+        userId = Math.floor(Math.random() * 9000000) + 1000000; // Generate a 7-8 digit number
+        userExists = await User.findOne({ userId });
+      } while (userExists); // Keep generating until it's unique
+  
+      // Create a new user
+      const newUser = new User({
+        name,
+        email,
+        passwordHash,
+        userId
+      });
+  
+      await newUser.save();
+  
+      res.status(201).json(newUser);
     } catch (error) {
-        console.error('Error creating user:', error.message);
-        res.status(500).json({ message: 'Server error', error: error.message });
+      console.error('Error creating user:', error.message);
+      res.status(500).json({ message: 'Server error', error: error.message });
     }
 };
 

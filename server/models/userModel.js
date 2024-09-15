@@ -16,6 +16,12 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    userId:{
+        type: Number,
+        required: true,
+        unique: true,
+        autoIndex: true
+    },
     createdAt: {
         type: Date,
         default: Date.now
