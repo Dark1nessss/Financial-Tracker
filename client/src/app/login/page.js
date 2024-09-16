@@ -4,7 +4,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGoogle, faFacebook, faApple } from '@fortawesome/free-brands-svg-icons';
+import { faGoogle, faFacebookF, faApple } from '@fortawesome/free-brands-svg-icons';
 
 export default function LoginPage() {
   return (
@@ -85,14 +85,14 @@ export default function LoginPage() {
             </div>
 
             <div className="flex justify-center space-x-8 mt-4">
-              <button className="w-14 h-14 rounded-full bg-[#222222] flex items-center justify-center hover:text-[#4285F4] transition duration-300">
-                <FontAwesomeIcon icon={faGoogle} className="text-[#eaff00]" />
+              <button className="w-14 h-14 rounded-full bg-[#222222] flex items-center justify-center text-[#eaff00] hover:text-[#DB4437] transition duration-300">
+                <FontAwesomeIcon icon={faGoogle} />
               </button>
-              <button className="w-14 h-14 rounded-full bg-[#222222] flex items-center justify-center hover:text-[#3b5998] transition duration-300">
-                <FontAwesomeIcon icon={faFacebook} className="text-[#eaff00]" />
+              <button className="w-14 h-14 rounded-full bg-[#222222] flex items-center justify-center text-[#eaff00] hover:text-[#3b5998] transition duration-300">
+                <FontAwesomeIcon icon={faFacebookF} />
               </button>
-              <button className="w-14 h-14 rounded-full bg-[#222222] flex items-center justify-center hover:text-[#000000] transition duration-300">
-                <FontAwesomeIcon icon={faApple} className="text-[#eaff00]" />
+              <button className="w-14 h-14 rounded-full bg-[#222222] flex items-center justify-center text-[#eaff00] hover:text-[#A3AAAE] transition duration-300">
+                <FontAwesomeIcon icon={faApple} />
               </button>
             </div>
           </form>
