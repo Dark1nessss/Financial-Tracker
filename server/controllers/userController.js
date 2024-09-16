@@ -1,33 +1,6 @@
 const User = require('../models/userModel');
 const bcrypt = require('bcryptjs');
 
-// Function to get the next userId from the Counters collection
-const getNextUserId = async () => {
-    try {
-      console.log("Fetching next userId...");
-  
-      const counter = await Counter.findByIdAndUpdate(
-        { _id: 'userid' },
-        { $inc: { sequence_value: 1 } },
-        { new: true, upsert: true }
-      );
-      
-      console.log(`Next userId: ${counter.sequence_value}`);
-      console.log("Counter after update:", counter);
-  
-      if (counter) {
-        console.log("Next userId:", counter.sequence_value);
-        return counter.sequence_value;
-      } else {
-        console.error("Counter not found");
-        throw new Error("Counter not found");
-      }
-    } catch (error) {
-      console.error("Error in getNextUserId:", error.message);
-      throw error;
-    }
-};
-
 // Fetch all users from the database
 const getUsers = async (req, res) => {
     try {
