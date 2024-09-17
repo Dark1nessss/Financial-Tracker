@@ -102,13 +102,13 @@ export default function LoginPage() {
       </div>
       
       {/* Testimonials Section */}
-      <section className="w-full bg-[#191919] py-12 flex items-center justify-between max-w-7xl mx-auto px-10">
+      <section className="w-full bg-[#191919] py-12 flex items-center justify-between max-w-7xl mx-auto">
         {/* Title and Subtitle */}
         <div className="text-left">
           <h2 className="text-3xl font-bold text-[#eaff00]">
             Our <span className="text-white">Testimonials</span>
           </h2>
-          <p className="text-gray-400 text-base mt-4 max-w-2xl">
+          <p className="text-gray-400 text-base mt-4 max-w-3xl">
             Discover how YourBank has transformed lives with innovative digital solutions and personalized customer service.
             See why our clients trust us for a secure and prosperous financial journey.
           </p>
