@@ -4,9 +4,11 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGoogle, faFacebookF, faApple } from '@fortawesome/free-brands-svg-icons';
+import { faGoogle, faFacebookF, faApple} from '@fortawesome/free-brands-svg-icons';
+import { faArrowLeft, faArrowRight, faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
 
 export default function LoginPage() {
+  const [viewType, setViewType] = useState("Individuals");
   return (
     <>
       {/* Navbar */}
@@ -34,7 +36,7 @@ export default function LoginPage() {
 
       {/* Login Page */}
       <div className="min-h-screen bg-[#191919] flex flex-col items-center justify-center">
-        <div className="w-full max-w-5xl p-16 space-y-10 bg-[#1c1c1c] rounded-lg shadow-lg backdrop-blur-md">
+        <div className="w-full max-w-5xl p-16 space-y-14 bg-[#1c1c1c] rounded-lg shadow-lg backdrop-blur-md">
           <h2 className="text-center text-5xl font-bold text-[#eaff00]">Login</h2>
           <p className="text-center text-gray-400 text-lg">
             Welcome back! Please log in to access your account.
@@ -98,6 +100,53 @@ export default function LoginPage() {
           </form>
         </div>
       </div>
+      
+      {/* Testimonials Section */}
+      <section className="w-full bg-[#191919] py-12 flex items-center justify-between max-w-7xl mx-auto px-10">
+        {/* Title and Subtitle */}
+        <div className="text-left">
+          <h2 className="text-3xl font-bold text-[#eaff00]">
+            Our <span className="text-white">Testimonials</span>
+          </h2>
+          <p className="text-gray-400 text-base mt-4 max-w-2xl">
+            Discover how YourBank has transformed lives with innovative digital solutions and personalized customer service.
+            See why our clients trust us for a secure and prosperous financial journey.
+          </p>
+        </div>
+
+        {/* Toggle Button Wrapper */}
+        <div className="relative flex items-center justify-between w-[300px] h-16 p-2 bg-[#191919] rounded-full shadow-lg border border-[#333333]">
+          {/* Slightly Larger Background for Buttons */}
+          <div className="absolute inset-0 w-full h-full bg-[#191919] rounded-full"></div>
+
+          {/* Smaller Highlight */}
+          <div
+            className={`absolute w-[150px] h-10 bg-[#CCFF00] rounded-full transition-all duration-300 ${
+              viewType === "Businesses" ? "translate-x-[135px]" : "translate-x-0"
+            }`}
+          ></div>
+
+          {/* For Individuals Button */}
+          <button
+            className={`w-1/2 z-10 text-base font-semibold transition-all duration-300 ${
+              viewType === "Individuals" ? "text-black" : "text-white"
+            }`}
+            onClick={() => setViewType("Individuals")}
+          >
+            Individuals
+          </button>
+
+          {/* For Businesses Button */}
+          <button
+            className={`w-1/2 z-10 text-base font-semibold transition-all duration-300 ${
+              viewType === "Businesses" ? "text-black" : "text-white"
+            }`}
+            onClick={() => setViewType("Businesses")}
+          >
+            Businesses
+          </button>
+        </div>
+      </section>
     </>
   );
 }
