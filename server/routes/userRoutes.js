@@ -1,10 +1,19 @@
 const express = require('express');
-const { getUsers, createUser, updateUser, deleteUser } = require('../controllers/userController');
+const { getUsers, createUser, updateUser, deleteUser, loginUser } = require('../controllers/userController');
 const { check } = require('express-validator');
 const router = express.Router();
 
 // GET all users
 router.get('/', getUsers);
+
+// Create a new user (SignUp)
+router.post('/register', createUser);
+
+// Login user
+router.post('/login', loginUser);
+
+// Get all users (for testing)
+router.get('/users', getUsers);
 
 // POST create a new user
 router.post(

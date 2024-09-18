@@ -1,5 +1,6 @@
 const User = require('../models/userModel');
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 
 // Fetch all users from the database
 const getUsers = async (req, res) => {
@@ -85,6 +86,7 @@ const updateUser = async (req, res) => {
 
             const salt = await bcrypt.genSalt(10);
             user.passwordHash = await bcrypt.hash(password, salt);
+            console.log('Generated password hash:', passwordHash);
         }
 
         const updatedUser = await user.save();
@@ -110,4 +112,35 @@ const deleteUser = async (req, res) => {
     }
 };
 
-module.exports = { getUsers, createUser, updateUser, deleteUser };
+const loginUser = async (req, res) => {
+  const { email, password } = req.body;
+
+  try {
+    // Check if user exists
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.status(400).json({ message: 'User does not exist' });
+    }
+
+    // Validate password
+    const isMatch = await bcrypt.compare(password, user.passwordHash);
+    if (!isMatch) {
+      return res.status(400).json({ message: 'Invalid credentials' });
+    }
+
+    // Log JWT_SECRET to verify it's loaded correctly
+    console.log('JWT_SECRET:', process.env.JWT_SECRET);
+
+    // Generate JWT Token
+    const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
+
+    // Return token
+    res.status(200).json({ token, message: 'Login successful' });
+  } catch (error) {
+    console.error('Login error:', error.message);
+    res.status(500).json({ message: 'Server error' });
+  }
+};
+
+
+module.exports = { getUsers, createUser, updateUser, deleteUser, loginUser};

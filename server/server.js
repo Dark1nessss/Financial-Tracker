@@ -1,11 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const dotenv = require('dotenv');
 const cors = require('cors');
 const userRoutes = require('./routes/userRoutes');
-
-// Load environment variables
-dotenv.config();
+require('dotenv').config();
 
 // Initialize express app
 const app = express();
