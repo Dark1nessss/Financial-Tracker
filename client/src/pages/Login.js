@@ -40,7 +40,6 @@ function Login() {
       if (response.ok) {
         // Armazenar o token JWT no localStorage
         localStorage.setItem('token', data.token);
-        console.log('Login bem-sucedido!');
         // Redirecionar para o Dashboard
         navigate('/dashboard');
       } else {
