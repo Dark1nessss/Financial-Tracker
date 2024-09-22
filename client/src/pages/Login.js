@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const validateEmail = (email) => {
     const re = /\S+@\S+\.\S+/;
@@ -31,7 +33,7 @@ function Login() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ email, password }),
-      });      
+      });
 
       const data = await response.json();
 
@@ -39,6 +41,8 @@ function Login() {
         // Armazenar o token JWT no localStorage
         localStorage.setItem('token', data.token);
         console.log('Login bem-sucedido!');
+        // Redirecionar para o Dashboard
+        navigate('/dashboard');
       } else {
         setError(data.message || 'Erro no login');
       }
