@@ -10,7 +10,7 @@ function Login() {
     return re.test(email);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
     if (!validateEmail(email)) {
@@ -23,9 +23,28 @@ function Login() {
       return;
     }
 
-    console.log('Email:', email);
-    console.log('Password:', password);
-    setError('');
+    try {
+      // Enviar os dados para o backend
+      const response = await fetch('http://localhost:5000/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        // Armazenar o token JWT no localStorage
+        localStorage.setItem('token', data.token);
+        console.log('Login bem-sucedido!');
+      } else {
+        setError(data.message || 'Erro no login');
+      }
+    } catch (error) {
+      setError('Erro ao conectar ao servidor');
+    }
   };
 
   return (

@@ -11,7 +11,7 @@ function Register() {
     return re.test(email);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
     if (!validateEmail(email)) {
@@ -29,8 +29,26 @@ function Register() {
       return;
     }
 
-    console.log('Registo bem-sucedido!');
-    setError('');
+    try {
+      // Enviar os dados para o backend
+      const response = await fetch('http://localhost:5000/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        console.log('Registo bem-sucedido!');
+      } else {
+        setError(data.message || 'Erro no registo');
+      }
+    } catch (error) {
+      setError('Erro ao conectar ao servidor');
+    }
   };
 
   return (
