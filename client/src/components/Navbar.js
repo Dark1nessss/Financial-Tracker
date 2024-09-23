@@ -9,7 +9,7 @@ function Navbar() {
       {/* Logotipo */}
       <div className="flex items-center">
       <img src="/logo.png" alt="YourBank Logo" className="h-6 mr-4 transform transition-transform duration-300 hover:rotate-45" />
-        <span className="text-[#C1F000] text-2xl font-bold tracking-widest">YourBanK</span>
+        <span className="text-[#C1F000] text-2xl font-bold">Your<span className="text-white text-2xl font-bold">BanK</span></span>
       </div>
 
       {/* Ícone do Menu para Mobile */}
