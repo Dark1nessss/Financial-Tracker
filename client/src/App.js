@@ -5,7 +5,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Support from './pages/Support';
 import Dashboard from './pages/Dashboard';
-import Layout from './components/layout/Layout';
+import Layout from './components/layout/layout';
 
 function App() {
   return (
