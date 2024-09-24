@@ -65,7 +65,7 @@ function Navbar() {
       </Link>
       <Link 
         to="/login" 
-        className="bg-[#C1F000] text-black px-[30px] py-[7px] rounded-full hover:bg-[#A8E000] transition-colors duration-300 font-semibold">
+        className="bg-[#C1F000] text-black px-[30px] py-[7px] rounded-full hover:bg-white transition-colors duration-300 font-semibold">
         Login
       </Link>
       </div>

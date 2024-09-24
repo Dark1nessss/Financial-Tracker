@@ -19,9 +19,11 @@ const LandingPage = () => {
         <p className="text-lg mb-8">
           At YourBank, our mission is to provide comprehensive banking solutions that empower individuals and businesses to achieve their financial goals. We are committed to delivering personalized and innovative services that prioritize our customers' needs.
         </p>
-        <button className="bg-[#A5E404] text-black py-3 px-6 rounded-full hover:bg-[#b3f108] transition">
-          Open Account
+        <Link to="login">
+        <button className="bg-[#A5E404] text-black py-3 px-6 rounded-full hover:bg-white transition-colors duration-300 font-semibold">
+            Open Account
         </button>
+        </Link>
       </div>
 
       {/* Right Section with Combined Transactions and Background Decoration */}
