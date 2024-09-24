@@ -5,6 +5,7 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
+    <header className='bg-[#141313]'>
     <nav className="bg-[#1c1c1c] py-4 px-8 flex justify-between items-center rounded-full max-w-7xl mx-auto shadow-lg mt-6 relative">
       {/* Logotipo */}
       <div className="flex items-center">
@@ -69,6 +70,7 @@ function Navbar() {
       </Link>
       </div>
     </nav>
+    </header>
   );
 }
 
