@@ -68,7 +68,7 @@ const LandingPage = () => {
 
               {/* Button for Individuals */}
               <button
-                className={`z-10 w-1/2 text-md font-medium ${
+                className={`z-10 w-1/2 text-md font-medium pl-[5px] ${
                   !isActive ? "text-black" : "text-white"
                 } transition-colors duration-300`}
                 onClick={() => setIsActive(false)}
@@ -78,7 +78,7 @@ const LandingPage = () => {
 
               {/* Button for Businesses */}
               <button
-                className={`z-10 w-1/2 text-md font-medium ${
+                className={`z-10 w-1/2 text-md font-medium pr-[5px] ${
                   isActive ? "text-black" : "text-white"
                 } transition-colors duration-300`}
                 onClick={() => setIsActive(true)}
