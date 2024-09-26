@@ -58,11 +58,11 @@ const LandingPage = () => {
             </div>
 
             {/* Toggle Buttons */}
-            <div className="relative flex justify-center items-center w-64 h-14 bg-[#2B2B2B] rounded-full overflow-hidden">
+            <div className="relative flex justify-center items-center w-[280px] h-14 bg-[#2B2B2B] rounded-full overflow-hidden">
               {/* Background Highlight */}
               <div
-                className={`absolute h-2/3 w-[45%] bg-[#A5E404] rounded-full transition-transform duration-300 ease-in-out ${
-                  isActive ? "translate-x-[100%]" : "translate-x-0"
+                className={`absolute h-2/3 w-[50%] bg-[#A5E404] rounded-full transition-transform duration-300 ease-in-out ${
+                  isActive ? "translate-x-[45%]" : "-translate-x-[65px]"
                 }`}
               ></div>
 
