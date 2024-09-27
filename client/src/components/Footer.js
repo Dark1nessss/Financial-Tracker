@@ -26,9 +26,9 @@ function Footer() {
 
         {/* Contact Information */}
         <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-8 mb-8 text-sm">
-          <p className="flex items-center"><span className="text-[#C1F000] mr-2">📧</span> hello@skillbridge.com</p>
-          <p className="flex items-center"><span className="text-[#C1F000] mr-2">📞</span> +91 91813 23 2309</p>
-          <p className="flex items-center"><span className="text-[#C1F000] mr-2">📍</span> Somewhere in the World</p>
+          <p className="flex items-center"><span className="text-[#C1F000] mr-2"><img src="/mail.png" alt="YourBank Mail" className="h-4 transform transition-transform duration-[900ms] hover:rotate-[360deg]" /> </span> hello@skillbridge.com</p>
+          <p className="flex items-center"><span className="text-[#C1F000] mr-2"><img src="/phone.png" alt="YourBank Phone" className="h-4 transform transition-transform duration-[900ms] hover:rotate-[360deg]" /> </span> +91 91813 23 2309</p>
+          <p className="flex items-center"><span className="text-[#C1F000] mr-2"><img src="/location.png" alt="YourBanK Location" className="h-4 transform transition-transform duration-[900ms] hover:rotate-[360deg]" /> </span> Somewhere in the World</p>
         </div>
 
         {/* Social Media and Legal Links */}
