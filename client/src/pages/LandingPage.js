@@ -263,7 +263,7 @@ const LandingPage = () => {
             <div className="bg-[#1C1C1C] p-6 rounded-xl w-64 flex flex-col space-y-3" style={{ height: '100%' }}>
             <button
                 className={`py-3 px-4 rounded-full border transition 
-                  ${activeButton === 'Online Banking' ? 'border-[#A5E404] text-[#A5E404] bg-[#1C1C1C]' : 'border-gray-600 text-white hover:bg-gray-600 hover:text-black'}`}
+                  ${activeButton === 'Online Banking' ? 'border-[#A5E404] text-[#A5E404] bg-[#1C1C1C]' : 'border-gray-600 text-white hover:bg-white hover:text-black'}`}
                 onClick={() => setActiveButton('Online Banking')}
               >
                 Online Banking
@@ -271,7 +271,7 @@ const LandingPage = () => {
 
               <button
                 className={`py-3 px-4 rounded-full border transition 
-                  ${activeButton === 'Financial Tools' ? 'border-[#A5E404] text-[#A5E404] bg-[#1C1C1C]' : 'border-gray-600 text-white hover:bg-gray-600 hover:text-black'}`}
+                  ${activeButton === 'Financial Tools' ? 'border-[#A5E404] text-[#A5E404] bg-[#1C1C1C]' : 'border-gray-600 text-white hover:bg-white hover:text-black'}`}
                 onClick={() => setActiveButton('Financial Tools')}
               >
                 Financial Tools
@@ -279,7 +279,7 @@ const LandingPage = () => {
 
               <button
                 className={`py-3 px-4 rounded-full border transition 
-                  ${activeButton === 'Customer Support' ? 'border-[#A5E404] text-[#A5E404] bg-[#1C1C1C]' : 'border-gray-600 text-white hover:bg-gray-600 hover:text-black'}`}
+                  ${activeButton === 'Customer Support' ? 'border-[#A5E404] text-[#A5E404] bg-[#1C1C1C]' : 'border-gray-600 text-white hover:bg-white hover:text-black'}`}
                 onClick={() => setActiveButton('Customer Support')}
               >
                 Customer Support
