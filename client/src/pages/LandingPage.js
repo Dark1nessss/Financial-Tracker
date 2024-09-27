@@ -94,7 +94,7 @@ const LandingPage = () => {
         {/* Product Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
           <div className="text-center">
-            <img src="/checkings.png" alt="Checking Accounts" className="w-16 h-16 mb-6 mx-auto" />
+            <img src="/bag.png" alt="Checking Accounts" className="w-16 h-16 mb-6 mx-auto" />
             <h3 className="text-xl font-semibold text-gray-300 mb-4">Checking Accounts</h3>
             <p className="text-sm text-gray-400">
               Enjoy easy and convenient access to your funds with our range of checking account options. Benefit from features such as online and mobile banking, debit cards, and free ATM access.
@@ -103,7 +103,7 @@ const LandingPage = () => {
 
           {/* Add vertical divider here */}
           <div className="border-l border-gray-600 text-center px-8">
-            <img src="/savings.png" alt="Savings Accounts" className="w-16 h-16 mb-6 mx-auto" />
+            <img src="/deposit.png" alt="Savings Accounts" className="w-16 h-16 mb-6 mx-auto" />
             <h3 className="text-xl font-semibold text-gray-300 mb-4">Savings Accounts</h3>
             <p className="text-sm text-gray-400">
               Build your savings with our competitive interest rates and flexible savings account options. Whether you're saving for a specific goal or want to grow your wealth over time, we have the right account for you.
@@ -112,7 +112,7 @@ const LandingPage = () => {
 
           {/* Add vertical divider here */}
           <div className="border-l border-gray-600 text-center px-8">
-            <img src="/loans.png" alt="Loans and Mortgages" className="w-16 h-16 mb-6 mx-auto" />
+            <img src="/notes_con.png" alt="Loans and Mortgages" className="w-16 h-16 mb-6 mx-auto" />
             <h3 className="text-xl font-semibold text-gray-300 mb-4">Loans and Mortgages</h3>
             <p className="text-sm text-gray-400">
               Realize your dreams with our flexible loan and mortgage options. From personal loans to home mortgages, our experienced loan officers are here to guide you through the application process and help you secure the funds you need.
@@ -135,28 +135,28 @@ const LandingPage = () => {
             <div>
               <div className="bg-[#1C1C1C] grid grid-cols-2 gap-4 mb-16 p-10 rounded-xl">
                 {/* Managing Personal Finances */}
-                <div className="flex flex-col items-center text-center bg-[#141313] p-6 rounded-lg box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
+                <div className="flex flex-col items-center text-center bg-[#141313] p-6 rounded-lg transition-transform transform hover:scale-105 duration-300">
                   <div className="bg-[#1C1C1C] rounded-full p-4">
                     <img src="/notes_con.png" alt="Managing Personal Finances" className="w-12 h-12" />
                   </div>
                   <p className="mt-4">Managing Personal Finances</p>
                 </div>
                 {/* Saving for the Future */}
-                <div className="flex flex-col items-center text-center bg-[#141313] p-6 rounded-lg box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
+                <div className="flex flex-col items-center text-center bg-[#141313] p-6 rounded-lg transition-transform transform hover:scale-105 duration-300">
                   <div className="bg-[#1C1C1C] rounded-full p-4">
                     <img src="/savings_con.png" alt="Saving for the Future" className="w-12 h-12" />
                   </div>
                   <p className="mt-4">Saving for the Future</p>
                 </div>
                 {/* Homeownership */}
-                <div className="flex flex-col items-center text-center bg-[#141313] p-6 rounded-lg box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
+                <div className="flex flex-col items-center text-center bg-[#141313] p-6 rounded-lg transition-transform transform hover:scale-105 duration-300">
                   <div className="bg-[#1C1C1C] rounded-full p-4">
                     <img src="/apartment_con.png" alt="Homeownership" className="w-12 h-12" />
                   </div>
                   <p className="mt-4">Homeownership</p>
                 </div>
                 {/* Education Funding */}
-                <div className="flex flex-col items-center text-center bg-[#141313] p-6 rounded-lg box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
+                <div className="flex flex-col items-center text-center bg-[#141313] p-6 rounded-lg transition-transform transform hover:scale-105 duration-300">
                   <div className="bg-[#1C1C1C] rounded-full p-4">
                     <img src="/book_con.png" alt="Education Funding" className="w-12 h-12" />
                   </div>
@@ -216,28 +216,28 @@ const LandingPage = () => {
               {/* Icon container for business use cases */}
               <div className="bg-[#1C1C1C] grid grid-cols-2 gap-4 p-10 rounded-xl mt-12">
                 {/* Starting an Enterprise */}
-                <div className="flex flex-col items-center text-center bg-[#141313] p-6 rounded-lg box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
+                <div className="flex flex-col items-center text-center bg-[#141313] p-6 rounded-lg transition-transform transform hover:scale-105 duration-300">
                   <div className="bg-[#1C1C1C] rounded-full p-4">
                     <img src="/bank_con.png" alt="Starting an Enterprise" className="w-12 h-12" />
                   </div>
                   <p className="mt-4">Startups and Entrepreneurs</p>
                 </div>
                 {/* Business Expansion */}
-                <div className="flex flex-col items-center text-center bg-[#141313] p-6 rounded-lg box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
+                <div className="flex flex-col items-center text-center bg-[#141313] p-6 rounded-lg transition-transform transform hover:scale-105 duration-300">
                   <div className="bg-[#1C1C1C] rounded-full p-4">
                     <img src="/graph_con.png" alt="Business Expansion" className="w-12 h-12" />
                   </div>
                   <p className="mt-4">Business Expansion</p>
                 </div>
                 {/* Cash Flow Management */}
-                <div className="flex flex-col items-center text-center bg-[#141313] p-6 rounded-lg box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
+                <div className="flex flex-col items-center text-center bg-[#141313] p-6 rounded-lg transition-transform transform hover:scale-105 duration-300">
                   <div className="bg-[#1C1C1C] rounded-full p-4">
                     <img src="/dollar_con.png" alt="Cash Flow Management" className="w-12 h-12" />
                   </div>
                   <p className="mt-4">Cash Flow Management</p>
                 </div>
                 {/* Payment Solutions */}
-                <div className="flex flex-col items-center text-center bg-[#141313] p-6 rounded-lg box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
+                <div className="flex flex-col items-center text-center bg-[#141313] p-6 rounded-lg transition-transform transform hover:scale-105 duration-300">
                   <div className="bg-[#1C1C1C] rounded-full p-4">
                     <img src="/hold_con.png" alt="Payment Solutions" className="w-12 h-12" />
                   </div>
