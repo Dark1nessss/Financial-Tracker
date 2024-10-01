@@ -451,29 +451,30 @@ const LandingPage = () => {
             {!showMore && (
               <div 
                 id="fadeEffect" 
-                className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#141313] to-transparent pointer-events-none transition-opacity duration-300">
+                className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#141313] to-transparent pointer-events-none transition-opacity duration-1000 ease-in-out">
               </div>
             )}
           </div>
 
           {/* Button to toggle FAQs */}
           <div className="flex justify-center mt-8">
-          <button
-            onClick={handleShowMore}
-            className="bg-[#A5E404] text-black py-2 px-6 rounded-full flex items-center transition-all duration-300"
-          >
             {showMore ? (
-              <>
+              <a
+                href="/faq-page"
+                className="bg-[#A5E404] text-black py-2 px-6 rounded-full flex items-center transition-all duration-700 ease-in-out"
+              >
                 FAQ Page
-                <span className="ml-2 transform rotate-45 transition-transform duration-500">↗</span>
-              </>
+                <span className="ml-2 transform rotate-45 transition-transform duration-700 ease-in-out">↗</span>
+              </a>
             ) : (
-              <>
+              <button
+                onClick={handleShowMore}
+                className="bg-[#A5E404] text-black py-2 px-6 rounded-full flex items-center transition-all duration-700 ease-in-out"
+              >
                 Load All FAQs
-                <span className="ml-2 transform rotate-0 transition-transform duration-500">▼</span>
-              </>
+                <span className="ml-2 transform rotate-0 transition-transform duration-700 ease-in-out">▼</span>
+              </button>
             )}
-          </button>
           </div>
         </div>
       </section>
