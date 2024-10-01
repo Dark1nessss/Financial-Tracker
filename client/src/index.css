@@ -7,13 +7,8 @@ body, html {
     margin: 0;
     padding: 0;
 }
-  
-.transition-height {
-    transition: height 0.7s ease-in-out;
-    overflow: hidden;
-}
 
 .max-height-transition {
-    transition: max-height 0.5s ease-in-out;
+    transition: max-height 0.7s ease-in-out;
     overflow: hidden;
 }
