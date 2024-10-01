@@ -367,7 +367,7 @@ const LandingPage = () => {
           {/* FAQs Container */}
           <div className="relative overflow-hidden">
             {/* FAQ Cards */}
-            <div className="grid grid-cols-2 gap-8">
+            <div className={`grid grid-cols-2 gap-8 max-height-transition ${showMore ? 'max-h-[5000px]' : 'max-h-[450px]'}`}>
               {/* Question 1 */}
               <div className="border border-[#1C1C1C] p-6 rounded-lg">
                 <h3 className="text-xl font-semibold mb-4">
@@ -449,7 +449,10 @@ const LandingPage = () => {
 
             {/* Fade Effect */}
             {!showMore && (
-              <div id="fadeEffect" className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent pointer-events-none transition-opacity duration-300"></div>
+              <div 
+                id="fadeEffect" 
+                className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#141313] to-transparent pointer-events-none transition-opacity duration-300">
+              </div>
             )}
           </div>
 
@@ -462,12 +465,12 @@ const LandingPage = () => {
             {showMore ? (
               <>
                 FAQ Page
-                <span className="ml-2 transition-transform duration-300">↗</span>
+                <span className="ml-2 transform rotate-45 transition-transform duration-500">↗</span>
               </>
             ) : (
               <>
                 Load All FAQs
-                <span className="ml-2 transition-transform duration-300">▼</span>
+                <span className="ml-2 transform rotate-0 transition-transform duration-500">▼</span>
               </>
             )}
           </button>
