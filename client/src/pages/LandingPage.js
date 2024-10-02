@@ -529,20 +529,20 @@ const LandingPage = () => {
           <div className="my-8"></div>
 
           {/* Testimonial Cards */}
-          <div className="relative flex justify-between items-center">
+          <div className="relative flex justify-center items-center">
             {/* Left Navigation Arrow */}
-            <button className="absolute left-[-50px] z-10 bg-transparent hover:bg-[#A5E404] transition-colors p-2 rounded-full">
+            <button className="absolute left-0 transform translate-x-8 z-10 bg-[#141313] hover:bg-[#A5E404] transition-colors p-3 rounded-full">
               <img
                 src="/left_pointer.png"
                 alt="Previous"
-                className="w-6 h-6"
+                className="w-8 h-8"
               />
             </button>
 
             {/* Testimonials */}
-            <div className="flex space-x-8">
+            <div className="flex space-x-12 items-center mx-auto">
               <div className="text-center">
-                <img src="/indent.png" alt="Quote Icon" className="w-16 h-16 mb-6 mx-auto" />
+                <img src="/indent.png" alt="Quote Icon" className="w-12 h-12 mb-4 mx-auto" />
                 <p className="text-lg text-gray-400 max-w-xs mx-auto">
                   YourBank has been my trusted financial partner for years. Their personalized service and innovative digital banking solutions have made managing my finances a breeze.
                 </p>
@@ -550,7 +550,7 @@ const LandingPage = () => {
               </div>
 
               <div className="border-l border-gray-600 text-center px-8">
-                <img src="/indent.png" alt="Quote Icon" className="w-16 h-16 mb-6 mx-auto" />
+                <img src="/indent.png" alt="Quote Icon" className="w-12 h-12 mb-4 mx-auto" />
                 <p className="text-lg text-gray-400 max-w-xs mx-auto">
                   I recently started my own business, and YourBank has been instrumental in helping me set up my business accounts and secure the financing I needed. Their expert guidance and tailored solutions have been invaluable.
                 </p>
@@ -558,7 +558,7 @@ const LandingPage = () => {
               </div>
 
               <div className="border-l border-gray-600 text-center px-8">
-                <img src="/indent.png" alt="Quote Icon" className="w-16 h-16 mb-6 mx-auto" />
+                <img src="/indent.png" alt="Quote Icon" className="w-12 h-12 mb-4 mx-auto" />
                 <p className="text-lg text-gray-400 max-w-xs mx-auto">
                   I love the convenience of YourBank’s mobile banking app. It allows me to stay on top of my finances and make transactions on the go. The app is user-friendly and secure, giving me peace of mind.
                 </p>
@@ -567,11 +567,11 @@ const LandingPage = () => {
             </div>
 
             {/* Right Navigation Arrow */}
-            <button className="absolute right-[-50px] z-10 bg-transparent hover:bg-[#A5E404] transition-colors p-2 rounded-full">
+            <button className="absolute right-0 transform -translate-x-8 z-10 bg-[#141313] hover:bg-[#A5E404] transition-colors p-3 rounded-full">
               <img
                 src="/left_pointer.png"
                 alt="Next"
-                className="w-6 h-6 rotate-180"
+                className="w-8 h-8 rotate-180"
               />
             </button>
           </div>
