@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Welcome from '../components/sections/Welcome.js';
-import Products from '../components/sections/Products.js';
-import UseCases from '../components/sections/UseCases.js';
-import Features from '../components/sections/Features.js';
-import Faq from '../components/sections/Faq.js';
-import Testemonial from '../components/sections/Testemonial.js';
+import Welcome from '../components/sections/landingpage/Welcome.js';
+import Products from '../components/sections//landingpage/Products.js';
+import UseCases from '../components/sections//landingpage/UseCases.js';
+import Features from '../components/sections//landingpage/Features.js';
+import Faq from '../components/sections//landingpage/Faq.js';
+import Testemonial from '../components/sections//landingpage/Testemonial.js';
 
 const LandingPage = () => {
  

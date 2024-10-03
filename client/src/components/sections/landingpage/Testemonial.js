@@ -3,7 +3,6 @@ import { useState } from 'react';
 
 const Testemonial = () => {
   const [isActive, setIsActive] = useState(false);
-  const [activeButton, setActiveButton] = useState('Online Banking');
   return (
     <section className="testimonials-section text-white lg:ml-16 py-8">
     <div className="lg:px-56 px-6">
