@@ -3,7 +3,6 @@ import Products from '../components/sections//landingpage/Products.js';
 import UseCases from '../components/sections//landingpage/UseCases.js';
 import Features from '../components/sections//landingpage/Features.js';
 import Faq from '../components/sections//landingpage/Faq.js';
-import Testemonial from '../components/sections//landingpage/Testemonial.js';
 import OpenAcc from '../components/sections//landingpage/OpenAcc.js';
 
 const LandingPage = () => {
@@ -24,9 +23,6 @@ const LandingPage = () => {
       
       {/* FAQ'S Section */} 
       <Faq/>
-
-      {/* Testemonial Section */}
-      <Testemonial/>
       
       {/* Open Account */}
       <OpenAcc/>
