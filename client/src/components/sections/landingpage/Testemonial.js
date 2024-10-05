@@ -61,26 +61,41 @@ const Testemonial = () => {
           />
         </button>
 
-        {/* Testimonials */}
+        {/* Testimonials with adjusted bars and quote icon */}
         <div className="flex space-x-12 items-center mx-auto">
           <div className="text-center">
-            <img src="/indent.png" alt="Quote Icon" className="w-12 h-12 mb-4 mx-auto" />
+            {/* Horizontal bars and quote icon */}
+            <div className="flex items-center justify-center mb-4">
+              <div className="h-[1px] w-20 bg-gray-400"></div> {/* Thinner, lighter bar */}
+              <img src="/indent.png" alt="Quote Icon" className="w-12 h-12 mx-4" />
+              <div className="h-[1px] w-20 bg-gray-400"></div> {/* Thinner, lighter bar */}
+            </div>
             <p className="text-lg text-gray-400 max-w-xs mx-auto">
               YourBank has been my trusted financial partner for years. Their personalized service and innovative digital banking solutions have made managing my finances a breeze.
             </p>
             <p className="text-[#A5E404] mt-4">Sara T</p>
           </div>
 
-          <div className="border-l border-gray-600 text-center px-8">
-            <img src="/indent.png" alt="Quote Icon" className="w-12 h-12 mb-4 mx-auto" />
+          <div className="text-center px-8">
+            {/* Horizontal bars and quote icon */}
+            <div className="flex items-center justify-center mb-4">
+              <div className="h-[1px] w-20 bg-gray-400"></div> {/* Thinner, lighter bar */}
+              <img src="/indent.png" alt="Quote Icon" className="w-12 h-12 mx-4" />
+              <div className="h-[1px] w-20 bg-gray-400"></div> {/* Thinner, lighter bar */}
+            </div>
             <p className="text-lg text-gray-400 max-w-xs mx-auto">
               I recently started my own business, and YourBank has been instrumental in helping me set up my business accounts and secure the financing I needed. Their expert guidance and tailored solutions have been invaluable.
             </p>
             <p className="text-[#A5E404] mt-4">John D</p>
           </div>
 
-          <div className="border-l border-gray-600 text-center px-8">
-            <img src="/indent.png" alt="Quote Icon" className="w-12 h-12 mb-4 mx-auto" />
+          <div className="text-center px-8">
+            {/* Horizontal bars and quote icon */}
+            <div className="flex items-center justify-center mb-4">
+              <div className="h-[1px] w-20 bg-gray-400"></div> {/* Thinner, lighter bar */}
+              <img src="/indent.png" alt="Quote Icon" className="w-12 h-12 mx-4" />
+              <div className="h-[1px] w-20 bg-gray-400"></div> {/* Thinner, lighter bar */}
+            </div>
             <p className="text-lg text-gray-400 max-w-xs mx-auto">
               I love the convenience of YourBank’s mobile banking app. It allows me to stay on top of my finances and make transactions on the go. The app is user-friendly and secure, giving me peace of mind.
             </p>
