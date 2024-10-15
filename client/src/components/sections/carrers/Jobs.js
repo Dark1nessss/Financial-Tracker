@@ -51,31 +51,31 @@ const JobCard = () => {
               <h3 className="text-lg font-bold mb-4 text-white">Requirements & Qualifications</h3>
               <ul className="space-y-4">
                 <li className="flex items-start space-x-3">
-                  <img src="/jobico.png" alt="Job Icon" className="w-6 h-6"/>
+                  <img src="/jobico.png" alt="Job Icon" className="w-5 h-4"/>
                   <p className="text-[#C4C4C4] leading-relaxed">Bachelor’s degree in Business, Finance, or a related field</p>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <img src="/jobico.png" alt="Job Icon" className="w-6 h-6"/>
+                  <img src="/jobico.png" alt="Job Icon" className="w-5 h-4"/>
                   <p className="text-[#C4C4C4] leading-relaxed">Minimum of 3 years of experience in sales or relationship management in the banking industry</p>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <img src="/jobico.png" alt="Job Icon" className="w-6 h-6"/>
+                  <img src="/jobico.png" alt="Job Icon" className="w-5 h-4"/>
                   <p className="text-[#C4C4C4] leading-relaxed">Proven track record of meeting and exceeding sales targets</p>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <img src="/jobico.png" alt="Job Icon" className="w-6 h-6"/>
+                  <img src="/jobico.png" alt="Job Icon" className="w-5 h-4"/>
                   <p className="text-[#C4C4C4] leading-relaxed">Excellent interpersonal and negotiation skills</p>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <img src="/jobico.png" alt="Job Icon" className="w-6 h-6"/>
+                  <img src="/jobico.png" alt="Job Icon" className="w-5 h-4"/>
                   <p className="text-[#C4C4C4] leading-relaxed">Strong knowledge of banking products and services</p>
                 </li>
               </ul>
             </div>
 
             {/* Apply Button */}
-            <div className="mt-8">
-              <button className="bg-[#A5E404] text-black font-bold py-3 px-6 rounded-lg hover:bg-[#94D304] transition">
+            <div className="mt-12">
+              <button className="bg-[#A5E404] text-black py-2 px-6 rounded-full mt-6 hover:bg-white transition-colors duration-300 font-semibold">
                 Apply Now
               </button>
             </div>
@@ -114,31 +114,31 @@ const JobCard = () => {
               <h3 className="text-lg font-bold mb-4 text-white">Requirements & Qualifications</h3>
               <ul className="space-y-4">
                 <li className="flex items-start space-x-3">
-                  <img src="/jobico.png" alt="Job Icon" className="w-6 h-6"/>
+                  <img src="/jobico.png" alt="Job Icon" className="w-5 h-4"/>
                   <p className="text-[#C4C4C4] leading-relaxed">Bachelor’s degree in Business, Finance, or a related field</p>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <img src="/jobico.png" alt="Job Icon" className="w-6 h-6"/>
+                  <img src="/jobico.png" alt="Job Icon" className="w-5 h-4"/>
                   <p className="text-[#C4C4C4] leading-relaxed">Minimum of 3 years of experience in sales or relationship management in the banking industry</p>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <img src="/jobico.png" alt="Job Icon" className="w-6 h-6"/>
+                  <img src="/jobico.png" alt="Job Icon" className="w-5 h-4"/>
                   <p className="text-[#C4C4C4] leading-relaxed">Proven track record of meeting and exceeding sales targets</p>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <img src="/jobico.png" alt="Job Icon" className="w-6 h-6"/>
+                  <img src="/jobico.png" alt="Job Icon" className="w-5 h-4"/>
                   <p className="text-[#C4C4C4] leading-relaxed">Excellent interpersonal and negotiation skills</p>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <img src="/jobico.png" alt="Job Icon" className="w-6 h-6"/>
+                  <img src="/jobico.png" alt="Job Icon" className="w-5 h-4"/>
                   <p className="text-[#C4C4C4] leading-relaxed">Strong knowledge of banking products and services</p>
                 </li>
               </ul>
             </div>
 
             {/* Apply Button */}
-            <div className="mt-8">
-              <button className="bg-[#A5E404] text-black font-bold py-3 px-6 rounded-lg hover:bg-[#94D304] transition">
+            <div className="mt-12">
+              <button className="bg-[#A5E404] text-black py-2 px-6 rounded-full mt-6 hover:bg-white transition-colors duration-300 font-semibold">
                 Apply Now
               </button>
             </div>
