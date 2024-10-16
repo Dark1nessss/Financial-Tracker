@@ -40,57 +40,53 @@ const Faq = () => {
           {/* Question 1 */}
           <div className="border border-[#1C1C1C] p-6 rounded-lg">
             <h3 className="text-xl font-semibold mb-4">
-              How do I open an account with YourBank?
+              What is the minimum qualification to apply for a job at YourBank?
             </h3>
             <div className="h-[1px] w-full bg-gray-600 mb-4"></div>
             <p className="text-gray-400">
-              Opening an account with YourBank is easy. Simply visit our website and
-              click on the “Open an Account” button. Follow the prompts, provide the
-              required information, and complete the application process. If you
-              have any questions or need assistance, our customer support team is
-              available to help.
+              To apply for most positions at YourBank, you should possess a relevant academic qualification and, 
+              depending on the role, a minimum of 1 to 3 years of experience in the respective field.
+              Some positions may also require professional certifications.
             </p>
           </div>
 
           {/* Question 2 */}
           <div className="border border-[#1C1C1C] p-6 rounded-lg">
             <h3 className="text-xl font-semibold mb-4">
-              What documents do I need to provide to apply for a loan?
+              How can I submit my application for a position at YourBank?
             </h3>
             <div className="h-[1px] w-full bg-gray-600 mb-4"></div>
             <p className="text-gray-400">
-              The documents required for a loan application may vary depending on
-              the type of loan you are applying for. Generally, you will need to
-              provide identification documents, proof of income, and information
-              about the collateral (if applicable). Our loan officers will guide you
-              through the specific requirements during the application process.
+              Submitting your application is easy. Simply visit our careers page, find the position that matches your skill set, 
+              and click the "Apply Now" button. Complete the online application form and upload your resume. 
+              Our HR team will review your submission and contact you if shortlisted.
             </p>
           </div>
 
           {/* Question 3 */}
           <div className="border border-[#1C1C1C] p-6 rounded-lg">
             <h3 className="text-xl font-semibold mb-4">
-              How can I access my accounts online?
+              What is the interview process like at YourBank?
             </h3>
             <div className="h-[1px] w-full bg-gray-600 mb-4"></div>
             <p className="text-gray-400">
-              Accessing your accounts online is simple and secure. Visit our website
-              and click on the “Login” button. Enter your username and password to
-              access your accounts. If you haven’t registered for online banking,
-              click on the “Enroll Now” button and follow the registration process.
+              The interview process at YourBank typically involves an initial screening by HR, 
+              followed by one or more technical or role-specific interviews. 
+              Depending on the position, you may also have a final interview with senior management.
+              We aim to make the process as smooth and efficient as possible.
             </p>
           </div>
 
           {/* Question 4 */}
           <div className="border border-[#1C1C1C] p-6 rounded-lg">
             <h3 className="text-xl font-semibold mb-4">
-              Are my transactions and personal information secure?
+              How long does it take to hear back after applying for a job?
             </h3>
             <div className="h-[1px] w-full bg-gray-600 mb-4"></div>
             <p className="text-gray-400">
-              At YourBank, we prioritize the security of your transactions and
-              personal information. We employ industry-leading encryption and
-              multi-factor authentication to ensure that your data is protected.
+              You should expect to receive a response within 1-2 weeks after submitting your application. 
+              If shortlisted, we will reach out to schedule interviews. 
+              However, the timeline may vary depending on the position and the volume of applications.
             </p>
           </div>
 
@@ -98,22 +94,22 @@ const Faq = () => {
           {showMore && (
             <>
             <div className="border border-[#1C1C1C] p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-2">How can I update my account information?</h3>
+              <h3 className="text-xl font-semibold mb-2">Can I apply for more than one position at the same time?</h3>
               <hr className="my-2 opacity-50" />
               <p className="text-gray-400">
-                To update your account information, simply log in to your account through our online banking portal. 
-                Navigate to the "Account Settings" section, where you can edit your personal details, such as your address,
-               phone number, and email. If you need assistance, our customer support team is available to help.
+                Yes, you can apply for multiple positions if you meet the qualifications. 
+                We encourage applicants to review the job requirements carefully and apply 
+                for roles that best match their experience and expertise.
               </p>
             </div>
 
             <div className="border border-[#1C1C1C] p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-2">What are the fees for transfers?</h3>
+              <h3 className="text-xl font-semibold mb-2">Are there opportunities for growth and career advancement at YourBank?</h3>
               <hr className="my-2 opacity-50" />
               <p className="text-gray-400">
-                Transfer fees depend on the type of transfer you are making. 
-                Domestic transfers between accounts at YourBank are typically free, while international or third-party transfers may incur a small fee. 
-                For a full breakdown of our transfer fees, please consult the fee schedule available on our website or contact customer service.
+                Absolutely. YourBank believes in investing in its employees and offers various programs for career development, 
+                including training, mentorship, and opportunities for internal promotions. 
+                We encourage all employees to continuously grow and excel in their roles.
               </p>
             </div>
             </>
