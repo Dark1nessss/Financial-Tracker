@@ -59,7 +59,7 @@ function Navbar() {
       {/* Butons for Login e Sign Up - Mobile & Desktop */}
       <div className="hidden md:flex space-x-6">
       <Link 
-        to="/signup" 
+        to="/register" 
         className="text-white px-3 py-2 rounded-full hover:text-[#C1F000] transition-colors duration-300">
         Sign Up
       </Link>

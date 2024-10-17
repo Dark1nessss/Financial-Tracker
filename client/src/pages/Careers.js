@@ -5,7 +5,7 @@ import Jobs from '../components/sections/carrers/Jobs.js';
 import Faq from '../components/sections/carrers/Faq.js';
 import OpenAcc from '../components/sections/carrers/OpenAcc.js';
 
-const LandingPage = () => {
+const Careers = () => {
  
   
   return (
@@ -25,4 +25,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default Careers;

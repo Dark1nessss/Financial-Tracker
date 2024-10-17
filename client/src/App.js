@@ -5,6 +5,8 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Support from './pages/Support';
 import Careers from './pages/Careers';
+import About from './pages/About';
+import Security from './pages/Security';
 import Dashboard from './pages/Dashboard';
 import Layout from './components/layout/Layout';
 
@@ -19,6 +21,8 @@ function App() {
           <Route path="/support" element={<Support />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="/security" element={<Security />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </Layout>
     </Router>
