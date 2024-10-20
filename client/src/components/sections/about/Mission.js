@@ -10,17 +10,17 @@ const Mission = () => {
             </h2>
 
             {/* Introductory Paragraph */}
-            <p className="text-lg text-left text-[#C4C4C4] mb-12 leading-relaxed max-w-4xl">
+            <p className="text-lg text-left text-[#C4C4C4] mb-12 leading-relaxed max-w-7xl">
             We envision being a leading force in the industry, driven by innovation, integrity, and inclusivity, creating a brighter financial future for individuals and businesses while maintaining a strong commitment to customer satisfaction and community development.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             {/* Mission Section */}
-            <div className="relative">
+            <div className="relative w-[300px] h-[300px]">
                 {/* Background Mesh */}
-                <img src="/mesh_img.png" className="absolute inset-0 w-full h-full object-cover opacity-50" alt="Mesh Background" />
+                <img src="/mesh_img.png" className="absolute inset-0 w-full h-full object-cover opacity-70" alt="Mesh Background" />
                 {/* Main Image */}
-                <img src="/plant_img.png" className="relative rounded-lg" alt="Plant" />
+                <img src="/plant_img.png" className="relative rounded-lg w-[250px] h-[250px]" alt="Plant" />
             </div>
             <div>
                 <h3 className="text-3xl font-bold mb-4 text-left text-white">Mission</h3>
@@ -36,11 +36,11 @@ const Mission = () => {
                 Our vision at YourBank is to redefine banking by creating a seamless and personalized experience for our customers. We envision a future where banking is accessible, transparent, and tailored to individual preferences. Through continuous innovation and collaboration, we strive to be at the forefront of the industry, setting new standards for customer-centric banking. Our vision is to be the preferred financial institution, known for our unwavering commitment to excellence, trust, and customer satisfaction.
                 </p>
             </div>
-            <div className="relative">
+            <div className="relative w-[300px] h-[300px]">
                 {/* Background Mesh */}
-                <img src="/mesh_img.png" className="absolute inset-0 w-full h-full object-cover opacity-50" alt="Mesh Background" />
+                <img src="/mesh_img.png" className="absolute inset-0 w-full h-full object-cover opacity-70" alt="Mesh Background" />
                 {/* Main Image */}
-                <img src="/eye_img.png" className="relative rounded-lg" alt="Eye" />
+                <img src="/eye_img.png" className="relative rounded-lg w-[250px] h-[250px]" alt="Eye" />
             </div>
             </div>
         </div>
