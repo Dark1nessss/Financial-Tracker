@@ -16,11 +16,11 @@ const Mission = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             {/* Mission Section */}
-            <div className="relative w-[300px] h-[300px]">
-                {/* Background Mesh */}
-                <img src="/mesh_img.png" className="absolute inset-0 w-full h-full object-cover opacity-70" alt="Mesh Background" />
-                {/* Main Image */}
-                <img src="/plant_img.png" className="relative rounded-lg w-[250px] h-[250px]" alt="Plant" />
+            <div className="relative max-w-[350px] max-h-[350px] bg-[#1c1c1c] flex justify-center items-center rounded-lg">
+                {/* Mesh Background */}
+                <img src="/mesh_img.png" className="absolute inset-0 w-full h-full object-cover" alt="Mesh Background" />
+                {/* Image Centered */}
+                <img src="/plant_img.png" className="relative rounded-lg w-[90%] h-[90%] object-contain" alt="Plant" />
             </div>
             <div>
                 <h3 className="text-3xl font-bold mb-4 text-left text-white">Mission</h3>
@@ -36,11 +36,11 @@ const Mission = () => {
                 Our vision at YourBank is to redefine banking by creating a seamless and personalized experience for our customers. We envision a future where banking is accessible, transparent, and tailored to individual preferences. Through continuous innovation and collaboration, we strive to be at the forefront of the industry, setting new standards for customer-centric banking. Our vision is to be the preferred financial institution, known for our unwavering commitment to excellence, trust, and customer satisfaction.
                 </p>
             </div>
-            <div className="relative w-[300px] h-[300px]">
+            <div className="relative max-w-[350px] max-h-[350px] bg-[#1c1c1c] flex justify-center items-center rounded-lg">
                 {/* Background Mesh */}
-                <img src="/mesh_img.png" className="absolute inset-0 w-full h-full object-cover opacity-70" alt="Mesh Background" />
+                <img src="/mesh_img.png" className="absolute inset-0 w-full h-full object-cover" alt="Mesh Background" />
                 {/* Main Image */}
-                <img src="/eye_img.png" className="relative rounded-lg w-[250px] h-[250px]" alt="Eye" />
+                <img src="/eye_img.png" className="relative rounded-lg w-[90%] h-[90%] object-contain" alt="Eye" />
             </div>
             </div>
         </div>
