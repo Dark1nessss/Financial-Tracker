@@ -20,7 +20,7 @@ const Mission = () => {
                 {/* Mesh Background */}
                 <img src="/mesh_img.png" className="absolute inset-0 w-full h-full object-cover" alt="Mesh Background" />
                 {/* Image Centered */}
-                <img src="/plant_img.png" className="relative rounded-lg w-[90%] h-[90%] object-contain" alt="Plant" />
+                <img src="/plant_img.png" className="relative rounded-lg w-[90%] h-[90%] object-contain self-end" alt="Plant" />
             </div>
             <div>
                 <h3 className="text-3xl font-bold mb-4 text-left text-white">Mission</h3>
@@ -40,7 +40,7 @@ const Mission = () => {
                 {/* Background Mesh */}
                 <img src="/mesh_img.png" className="absolute inset-0 w-full h-full object-cover" alt="Mesh Background" />
                 {/* Main Image */}
-                <img src="/eye_img.png" className="relative rounded-lg w-[90%] h-[90%] object-contain" alt="Eye" />
+                <img src="/eye_img.png" className="relative rounded-lg w-[90%] h-[90%] object-contain self-end" alt="Eye" />
             </div>
             </div>
         </div>
