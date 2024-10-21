@@ -1,5 +1,6 @@
 import Welcome from '../components/sections/about/Welcome.js';
 import Mission from '../components/sections/about/Mission.js';
+import News from '../components/sections/about/News.js';
 
 const About = () => {
 
@@ -8,6 +9,8 @@ const About = () => {
       <Welcome/>
 
       <Mission/>
+
+      <News/>
     </div>
   );
 };
