@@ -1,4 +1,5 @@
 import Welcome from '../components/sections/security/Welcome.js';
+import Protect from '../components/sections/security/Protect.js';
 
 const Security = () => {
 
@@ -6,6 +7,7 @@ const Security = () => {
     <div className="bg-[#141313] text-white">
       <Welcome/>
       
+      <Protect/>
     </div>
   );
 };
