@@ -46,7 +46,7 @@ function Login() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen">
+    <section className="flex justify-center items-center py-16">
       <div className="bg-[#1C1C1C] p-10 rounded-lg shadow-md w-full max-w-md text-center">
         <h2 className="text-4xl font-bold text-[#A5E404] mb-2">Login</h2>
         <p className="text-[#C4C4C4] mb-8">Welcome back! Please log in to access your account.</p>
@@ -61,7 +61,7 @@ function Login() {
               placeholder="Enter your Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-3 rounded-full bg-[#2C2C2C] text-[#C4C4C4] focus:outline-none"
+              className="w-full px-4 py-3 rounded-full bg-[#2C2C2C] text-[#C4C4C4] placeholder-[#6B7280] focus:outline-none"
             />
           </div>
 
@@ -72,7 +72,7 @@ function Login() {
               placeholder="Enter your Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-4 py-3 rounded-full bg-[#2C2C2C] text-[#C4C4C4] focus:outline-none"
+              className="w-full px-4 py-3 rounded-full bg-[#2C2C2C] text-[#C4C4C4] placeholder-[#6B7280] focus:outline-none"
             />
           </div>
 
@@ -121,7 +121,7 @@ function Login() {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
