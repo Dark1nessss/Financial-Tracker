@@ -2,7 +2,7 @@ import React from 'react';
 
 const Mission = () => {
   return (
-    <section className="py-16">
+    <section className="mb-16">
         <div className="max-w-7xl mx-auto px-8">
             {/* Section Title */}
             <h2 className="text-5xl font-bold mb-8 text-left">

@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function Login() {
+function Register() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
@@ -14,19 +15,24 @@ function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    
     if (!validateEmail(email)) {
       setError('Por favor insira um email válido.');
       return;
     }
 
-    if (!password) {
-      setError('Por favor insira a sua password.');
+    if (!password || !confirmPassword) {
+      setError('Por favor preencha a password e a confirmação da password.');
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      setError('As passwords não coincidem.');
       return;
     }
 
     try {
-      const response = await fetch('http://localhost:5000/api/auth/login', {
+      const response = await fetch('http://localhost:5000/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
@@ -35,10 +41,10 @@ function Login() {
       const data = await response.json();
 
       if (response.ok) {
-        localStorage.setItem('token', data.token);
-        navigate('/dashboard');
+        console.log('Registo bem-sucedido!');
+        navigate('/login'); // Navigate to login after successful registration
       } else {
-        setError(data.message || 'Erro no login');
+        setError(data.message || 'Erro no registo');
       }
     } catch (error) {
       setError('Erro ao conectar ao servidor');
@@ -48,8 +54,8 @@ function Login() {
   return (
     <section className="flex justify-center items-center py-16">
       <div className="bg-[#1C1C1C] p-10 rounded-lg shadow-md w-full max-w-md text-center">
-        <h2 className="text-4xl font-bold text-[#A5E404] mb-2">Login</h2>
-        <p className="text-[#C4C4C4] mb-8">Welcome back! Please log in to access your account.</p>
+        <h2 className="text-4xl font-bold text-[#A5E404] mb-2">Registo</h2>
+        <p className="text-[#C4C4C4] mb-8">Create a new account by filling in the information below.</p>
         
         {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
         
@@ -76,28 +82,30 @@ function Login() {
             />
           </div>
 
-          {/* Forgot Password Link */}
-          <div className="text-right">
-            <a href="/forgot-password" className="text-[#A5E404] text-sm hover:underline">
-              Forgot Password?
-            </a>
+          {/* Confirm Password Input */}
+          <div className="relative">
+            <input
+              type="password"
+              placeholder="Confirm your Password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              className="w-full px-4 py-3 rounded-full bg-[#2C2C2C] text-[#C4C4C4] placeholder-[#6B7280] focus:outline-none"
+            />
           </div>
 
-          {/* Login Button */}
+          {/* Register Button */}
           <button
             type="submit"
             className="w-full py-3 rounded-full bg-[#A5E404] text-black font-bold hover:bg-[#93c603] transition"
           >
-            Login
+            Register
           </button>
-
-          {/* Sign Up Button */}
           <button
             type="button"
-            onClick={() => navigate('/register')}
+            onClick={() => navigate('/login')}
             className="w-full py-3 rounded-full bg-[#2C2C2C] text-[#C4C4C4] font-bold mt-4 hover:bg-[#3a3a3a] transition"
           >
-            Sign Up
+            Already Have an Account?
           </button>
         </form>
 
@@ -108,7 +116,7 @@ function Login() {
           <hr className="flex-grow border-[#333]" />
         </div>
 
-        {/* Social Media Login Options */}
+        {/* Social Media Register Options */}
         <div className="flex justify-center space-x-6">
           <button className="p-3 rounded-full bg-[#2C2C2C] text-[#A5E404]">
             <i className="fab fa-google"></i> {/* Replace with actual Google icon */}
@@ -125,4 +133,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Register;
