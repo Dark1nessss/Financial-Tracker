@@ -59,12 +59,13 @@ function Register() {
 
   return (
     <section className="flex justify-center items-center py-16">
-      <div className="bg-[#1C1C1C] p-10 rounded-lg shadow-md w-full max-w-5xl text-center">
-        <h2 className="text-4xl font-bold text-[#A5E404] mb-2">Registo</h2>
-        <p className="text-[#C4C4C4] mb-8">Create a new account by filling in the information below.</p>
-
+      <div className="relative bg-[#1C1C1C] p-12 md:p-16 rounded-2xl shadow-md w-full max-w-5xl text-center">
+      <img src="/abstract_design.png" alt="Mesh" className="absolute inset-0 h-full w-full object-cover opacity-5 pointer-events-none rounded-lg" />
+        <h2 className="text-4xl font-bold text-[#A5E404] mb-2">Sign Up</h2>
+        <p className="text-[#C4C4C4] mb-8">
+          Join our community today! Create an account to unlock exclusive features and personalized experiences.
+        </p>
         {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
-
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Email Input */}
@@ -105,21 +106,22 @@ function Register() {
           </div>
 
           {/* Register Button */}
+          <div className="flex justify-between space-x-4 mt-6">
           <button
             type="submit"
-            className="w-full py-3 rounded-full bg-[#A5E404] text-black font-bold hover:bg-[#93c603] transition"
+            className="w-1/2 py-3 rounded-full bg-[#A5E404] text-black font-bold hover:bg-[#93c603] transition"
           >
             Register
           </button>
 
-          {/* Already Have an Account Button */}
           <button
             type="button"
             onClick={() => navigate('/login')}
-            className="w-full py-3 rounded-full bg-[#2C2C2C] text-[#C4C4C4] font-bold hover:bg-[#3a3a3a] transition"
+            className="w-1/2 py-3 rounded-full bg-[#2C2C2C] text-[#C4C4C4] font-bold hover:bg-[#3a3a3a] transition"
           >
             Already Have an Account?
           </button>
+        </div>
         </form>
 
         {/* Or Continue with */}
