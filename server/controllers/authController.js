@@ -4,16 +4,22 @@ const User = require('../models/User');
 
 // Registar um novo utilizador
 exports.register = async (req, res) => {
-  const { email, password } = req.body;
+  const { email, username, password } = req.body;
 
   try {
     let user = await User.findOne({ email });
     if (user) {
       return res.status(400).json({ message: 'Utilizador já existe' });
     }
+    
+    user = await User.findOne({ username: username.toLowerCase() });
+    if (user) {
+      return res.status(400).json({ message: 'Esse username já existe' });
+    }
 
     user = new User({
       email,
+      username: username.toLowerCase(),
       password: await bcrypt.hash(password, 10) // Encripta a password
     });
 
