@@ -3,7 +3,7 @@ import React from 'react';
 const Mission = () => {
   return (
     <section className="mb-16">
-        <div className="max-w-7xl mx-auto px-8">
+        <div className="max-w-7xl mx-auto">
             {/* Section Title */}
             <h2 className="text-5xl font-bold mb-8 text-left">
             Mission & <span className="text-[#A5E404]">Vision</span>
