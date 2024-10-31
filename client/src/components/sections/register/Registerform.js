@@ -61,20 +61,20 @@ function Register() {
     <section className="flex justify-center items-center py-16">
       <div className="relative bg-[#1C1C1C] p-12 md:p-16 rounded-2xl shadow-md w-full max-w-5xl text-center">
       <img src="/abstract_design.png" alt="Mesh" className="absolute inset-0 h-full w-full object-cover opacity-5 pointer-events-none rounded-lg" />
-        <h2 className="text-4xl font-bold text-[#A5E404] mb-2">Sign Up</h2>
-        <p className="text-[#C4C4C4] mb-8">
+        <h2 className="text-4xl font-bold text-[#A5E404] mb-6">Sign Up</h2>
+        <p className="text-[#C4C4C4] mb-12">
           Join our community today! Create an account to unlock exclusive features and personalized experiences.
         </p>
         {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
         <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Email Input */}
             <input
               type="email"
               placeholder="Enter your Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-3 rounded-full bg-[#2C2C2C] text-[#C4C4C4] placeholder-[#6B7280] focus:outline-none"
+              className="w-full px-4 py-4 rounded-full bg-[#2C2C2C] text-[#C4C4C4] placeholder-[#6B7280] focus:outline-none"
             />
 
             {/* Username Input */}
@@ -83,7 +83,7 @@ function Register() {
               placeholder="Enter your Username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              className="w-full px-4 py-3 rounded-full bg-[#2C2C2C] text-[#C4C4C4] placeholder-[#6B7280] focus:outline-none"
+              className="w-full px-4 py-4 rounded-full bg-[#2C2C2C] text-[#C4C4C4] placeholder-[#6B7280] focus:outline-none"
             />
 
             {/* Password Input */}
@@ -92,7 +92,7 @@ function Register() {
               placeholder="Enter your Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-4 py-3 rounded-full bg-[#2C2C2C] text-[#C4C4C4] placeholder-[#6B7280] focus:outline-none"
+              className="w-full px-4 py-4 rounded-full bg-[#2C2C2C] text-[#C4C4C4] placeholder-[#6B7280] focus:outline-none"
             />
 
             {/* Confirm Password Input */}
@@ -101,27 +101,27 @@ function Register() {
               placeholder="Confirm your Password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
-              className="w-full px-4 py-3 rounded-full bg-[#2C2C2C] text-[#C4C4C4] placeholder-[#6B7280] focus:outline-none"
+              className="w-full px-4 py-4 rounded-full bg-[#2C2C2C] text-[#C4C4C4] placeholder-[#6B7280] focus:outline-none"
             />
           </div>
 
-          {/* Register Button */}
-          <div className="flex justify-between space-x-4 mt-6">
-          <button
-            type="submit"
-            className="w-1/2 py-3 rounded-full bg-[#A5E404] text-black font-bold hover:bg-[#93c603] transition"
-          >
-            Register
-          </button>
+          {/* Register and Already Have an Account Buttons */}
+          <div className="flex justify-center items-center space-x-4 mt-6">
+            <button
+              type="submit"
+              className="w-5/12 py-3 rounded-full bg-[#A5E404] text-black font-bold hover:bg-[#93c603] transition"
+            >
+              Register
+            </button>
 
-          <button
-            type="button"
-            onClick={() => navigate('/login')}
-            className="w-1/2 py-3 rounded-full bg-[#2C2C2C] text-[#C4C4C4] font-bold hover:bg-[#3a3a3a] transition"
-          >
-            Already Have an Account?
-          </button>
-        </div>
+            <button
+              type="button"
+              onClick={() => navigate('/login')}
+              className="w-5/12 py-3 rounded-full bg-[#2C2C2C] text-[#C4C4C4] font-bold hover:bg-[#3a3a3a] transition"
+            >
+              Already Have an Account?
+            </button>
+          </div>
         </form>
 
         {/* Or Continue with */}
