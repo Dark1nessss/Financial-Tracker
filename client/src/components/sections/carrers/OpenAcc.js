@@ -21,7 +21,7 @@ const OpenAcc = () => {
         {/* Open Account button using Link */}
         <div className="relative z-10">
           <Link
-            to="/signup"
+            to="/register"
             className="inline-block bg-[#A5E404] text-black py-3 px-8 rounded-full hover:bg-white transition-colors duration-300 font-semibold"
           >
             Open Account
