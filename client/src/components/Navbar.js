@@ -21,7 +21,7 @@ function Navbar() {
       </button>
 
       {/* Links and Navigation - Mobile & Desktop */}
-      <ul className={`md:flex md:space-x-4 text-white items-center ${isOpen ? 'block' : 'hidden'} md:block`}>
+      <ul className={`md:flex text-white items-center ${isOpen ? 'block' : 'hidden'} md:block`}>
         <li>
           <Link 
             to="/" 

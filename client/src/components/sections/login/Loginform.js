@@ -47,62 +47,61 @@ function Login() {
 
   return (
     <section className="flex justify-center items-center py-16">
-      <div className="bg-[#1C1C1C] p-10 rounded-lg shadow-md w-full max-w-md text-center">
-        <h2 className="text-4xl font-bold text-[#A5E404] mb-2">Login</h2>
+      <div className="relative bg-[#1C1C1C] p-12 md:p-16 rounded-2xl shadow-md w-full max-w-5xl text-center">
+        <img src="/abstract_design.png" alt="Mesh" className="absolute inset-0 h-full w-full object-cover opacity-5 pointer-events-none rounded-lg" />
+        <h2 className="text-5xl text-[#A5E404] mb-4">Login</h2>
         <p className="text-[#C4C4C4] mb-8">Welcome back! Please log in to access your account.</p>
         
         {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
         
-        <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Email Input */}
-          <div className="relative">
+        <form onSubmit={handleSubmit} className="">
+          <div className="p-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Email Input */}
             <input
               type="email"
               placeholder="Enter your Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-3 rounded-full bg-[#2C2C2C] text-[#C4C4C4] placeholder-[#6B7280] focus:outline-none"
+              className="w-full px-6 py-4 text-lg rounded-full bg-[#2C2C2C] text-[#C4C4C4] placeholder-[#6B7280] focus:outline-none"
             />
-          </div>
 
-          {/* Password Input */}
-          <div className="relative">
             <input
               type="password"
               placeholder="Enter your Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-4 py-3 rounded-full bg-[#2C2C2C] text-[#C4C4C4] placeholder-[#6B7280] focus:outline-none"
+              className="w-full px-6 py-4 text-lg rounded-full bg-[#2C2C2C] text-[#C4C4C4] placeholder-[#6B7280] focus:outline-none"
             />
           </div>
 
           {/* Forgot Password Link */}
-          <div className="text-right">
+          <div className="text-center">
             <a href="/forgot-password" className="text-[#A5E404] text-sm hover:underline">
               Forgot Password?
             </a>
           </div>
 
-          {/* Login Button */}
-          <button
-            type="submit"
-            className="w-full py-3 rounded-full bg-[#A5E404] text-black font-bold hover:bg-[#93c603] transition"
-          >
-            Login
-          </button>
+          {/* Login and Sign Up Buttons */}
+          <div className="flex flex-col items-center space-y-4 mt-6">
+            <button
+              type="submit"
+              className="w-1/2 py-3 rounded-full bg-[#A5E404] text-black hover:bg-[#93c603] transition"
+            >
+              Login
+            </button>
 
-          {/* Sign Up Button */}
-          <button
-            type="button"
-            onClick={() => navigate('/register')}
-            className="w-full py-3 rounded-full bg-[#2C2C2C] text-[#C4C4C4] font-bold mt-4 hover:bg-[#3a3a3a] transition"
-          >
-            Sign Up
-          </button>
+            <button
+              type="button"
+              onClick={() => navigate('/register')}
+              className="w-1/2 py-3 rounded-full bg-[#2C2C2C] text-[#C4C4C4] hover:bg-[#3a3a3a] transition"
+            >
+              Sign Up
+            </button>
+          </div>
         </form>
 
         {/* Or Continue with */}
-        <div className="flex items-center my-6">
+        <div className="flex justify-center items-center my-6">
           <hr className="flex-grow border-[#333]" />
           <span className="mx-4 text-[#C4C4C4]">Or Continue with</span>
           <hr className="flex-grow border-[#333]" />
@@ -111,13 +110,13 @@ function Login() {
         {/* Social Media Login Options */}
         <div className="flex justify-center space-x-6">
           <button className="p-3 rounded-full bg-[#2C2C2C] text-[#A5E404]">
-            <i className="fab fa-google"></i> {/* Replace with actual Google icon */}
+            <i className="fab fa-google"></i>
           </button>
           <button className="p-3 rounded-full bg-[#2C2C2C] text-[#A5E404]">
-            <i className="fab fa-facebook"></i> {/* Replace with actual Facebook icon */}
+            <i className="fab fa-facebook"></i>
           </button>
           <button className="p-3 rounded-full bg-[#2C2C2C] text-[#A5E404]">
-            <i className="fab fa-apple"></i> {/* Replace with actual Apple icon */}
+            <i className="fab fa-apple"></i>
           </button>
         </div>
       </div>
