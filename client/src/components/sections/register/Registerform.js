@@ -61,13 +61,13 @@ function Register() {
     <section className="flex justify-center items-center py-16">
       <div className="relative bg-[#1C1C1C] p-12 md:p-16 rounded-2xl shadow-md w-full max-w-5xl text-center">
       <img src="/abstract_design.png" alt="Mesh" className="absolute inset-0 h-full w-full object-cover opacity-5 pointer-events-none rounded-lg" />
-        <h2 className="text-4xl font-bold text-[#A5E404] mb-6">Sign Up</h2>
-        <p className="text-[#C4C4C4] mb-12">
+        <h2 className="text-4xl text-[#A5E404] mb-4">Sign Up</h2>
+        <p className="text-[#C4C4C4]">
           Join our community today! Create an account to unlock exclusive features and personalized experiences.
         </p>
         {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <form onSubmit={handleSubmit} className="">
+          <div className="p-12 grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Email Input */}
             <input
               type="email"
@@ -106,10 +106,10 @@ function Register() {
           </div>
 
           {/* Register and Already Have an Account Buttons */}
-          <div className="flex justify-center items-center space-x-4 mt-6">
+          <div className="flex flex-col items-center space-y-4">
             <button
               type="submit"
-              className="w-5/12 py-3 rounded-full bg-[#A5E404] text-black font-bold hover:bg-[#93c603] transition"
+              className="w-5/12 py-3 rounded-full bg-[#a5e404] text-black hover:bg-[#93c603] transition"
             >
               Register
             </button>
@@ -117,7 +117,7 @@ function Register() {
             <button
               type="button"
               onClick={() => navigate('/login')}
-              className="w-5/12 py-3 rounded-full bg-[#2C2C2C] text-[#C4C4C4] font-bold hover:bg-[#3a3a3a] transition"
+              className="w-5/12 py-3 rounded-full bg-[#2C2C2C] text-[#C4C4C4] hover:bg-[#3a3a3a] transition"
             >
               Already Have an Account?
             </button>
