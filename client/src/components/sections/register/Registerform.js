@@ -65,7 +65,9 @@ function Register() {
         <p className="text-[#C4C4C4]">
           Join our community today! Create an account to unlock exclusive features and personalized experiences.
         </p>
+
         {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
+
         <form onSubmit={handleSubmit} className="">
           <div className="p-12 grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Email Input */}
@@ -132,15 +134,15 @@ function Register() {
         </div>
 
         {/* Social Media Register Options */}
-        <div className="flex justify-center space-x-6">
-          <button className="p-3 rounded-full bg-[#2C2C2C] text-[#A5E404]">
-            <i className="fab fa-google"></i> {/* Replace with actual Google icon */}
+        <div className="flex justify-center space-x-6 mt-6">
+          <button className="rounded-full shadow-lg transition duration-300 hover:shadow-[0_0_20px_#A5E404]">
+            <img src="/google_ico.png" alt="Google" className="h-20 w-20" />
           </button>
-          <button className="p-3 rounded-full bg-[#2C2C2C] text-[#A5E404]">
-            <i className="fab fa-facebook"></i> {/* Replace with actual Facebook icon */}
+          <button className="rounded-full shadow-lg transition duration-300 hover:shadow-[0_0_20px_#A5E404]">
+            <img src="/facebook_ico.png" alt="Facebook" className="h-20 w-20" />
           </button>
-          <button className="p-3 rounded-full bg-[#2C2C2C] text-[#A5E404]">
-            <i className="fab fa-apple"></i> {/* Replace with actual Apple icon */}
+          <button className="rounded-full shadow-lg transition duration-300 hover:shadow-[0_0_20px_#A5E404]">
+            <img src="/apple_ico.png" alt="Apple" className="h-20 w-20" />
           </button>
         </div>
       </div>

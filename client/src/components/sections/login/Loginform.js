@@ -85,7 +85,7 @@ function Login() {
           <div className="flex flex-col items-center space-y-4 mt-6">
             <button
               type="submit"
-              className="w-1/2 py-3 rounded-full bg-[#A5E404] text-black hover:bg-[#93c603] transition"
+              className="w-5/12 py-3 rounded-full bg-[#a5e404] text-black hover:bg-[#93c603] transition"
             >
               Login
             </button>
@@ -93,7 +93,7 @@ function Login() {
             <button
               type="button"
               onClick={() => navigate('/register')}
-              className="w-1/2 py-3 rounded-full bg-[#2C2C2C] text-[#C4C4C4] hover:bg-[#3a3a3a] transition"
+              className="w-5/12 py-3 rounded-full bg-[#2C2C2C] text-[#C4C4C4] hover:bg-[#3a3a3a] transition"
             >
               Sign Up
             </button>
@@ -108,15 +108,15 @@ function Login() {
         </div>
 
         {/* Social Media Login Options */}
-        <div className="flex justify-center space-x-6">
-          <button className="p-3 rounded-full bg-[#2C2C2C] text-[#A5E404]">
-            <i className="fab fa-google"></i>
+        <div className="flex justify-center space-x-6 mt-6">
+          <button className="rounded-full shadow-lg transition duration-300 hover:shadow-[0_0_20px_#A5E404]">
+            <img src="/google_ico.png" alt="Google" className="h-20 w-20" />
           </button>
-          <button className="p-3 rounded-full bg-[#2C2C2C] text-[#A5E404]">
-            <i className="fab fa-facebook"></i>
+          <button className="rounded-full shadow-lg transition duration-300 hover:shadow-[0_0_20px_#A5E404]">
+            <img src="/facebook_ico.png" alt="Facebook" className="h-20 w-20" />
           </button>
-          <button className="p-3 rounded-full bg-[#2C2C2C] text-[#A5E404]">
-            <i className="fab fa-apple"></i>
+          <button className="rounded-full shadow-lg transition duration-300 hover:shadow-[0_0_20px_#A5E404]">
+            <img src="/apple_ico.png" alt="Apple" className="h-20 w-20" />
           </button>
         </div>
       </div>
