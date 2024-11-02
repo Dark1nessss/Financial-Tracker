@@ -8,6 +8,7 @@ import Careers from './pages/Careers';
 import About from './pages/About';
 import Security from './pages/Security';
 import Dashboard from './pages/Dashboard';
+import ForgotPassword from './pages/ForgotPassword';
 import Layout from './components/layout/Layout';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/careers" element={<Careers />} />
           <Route path="/security" element={<Security />} />
           <Route path="/about" element={<About />} />
+          <Route path="/forgotpass" element={<ForgotPassword />} />
         </Routes>
       </Layout>
     </Router>

@@ -49,7 +49,7 @@ function Login() {
     <section className="flex justify-center items-center py-16">
       <div className="relative bg-[#1C1C1C] p-12 md:p-16 rounded-2xl shadow-md w-full max-w-5xl text-center">
         <img src="/abstract_design.png" alt="Mesh" className="absolute inset-0 h-full w-full object-cover opacity-5 pointer-events-none rounded-lg" />
-        <h2 className="text-5xl text-[#A5E404] mb-4">Login</h2>
+        <h2 className="text-4xl text-[#A5E404] mb-4">Login</h2>
         <p className="text-[#C4C4C4] mb-8">Welcome back! Please log in to access your account.</p>
         
         {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
@@ -76,7 +76,7 @@ function Login() {
 
           {/* Forgot Password Link */}
           <div className="text-center">
-            <a href="/forgot-password" className="text-[#A5E404] text-sm hover:underline">
+            <a href="/forgotpass" className="text-[#A5E404] text-sm hover:underline">
               Forgot Password?
             </a>
           </div>
