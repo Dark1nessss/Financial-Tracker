@@ -1,4 +1,4 @@
-import Forgot from '../components/sections/forgotpassword/forgot.js';
+import Forgot from '../components/sections/forgotpassword/forgot_password.js';
 
 const ForgotPassword = () => {
 

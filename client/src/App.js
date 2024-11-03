@@ -9,6 +9,8 @@ import About from './pages/About';
 import Security from './pages/Security';
 import Dashboard from './pages/Dashboard';
 import ForgotPassword from './pages/ForgotPassword';
+import NewPassword from './pages/NewPassword'; 
+import CodeCheck from './pages/CodeCheck';
 import Layout from './components/layout/Layout';
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
           <Route path="/security" element={<Security />} />
           <Route path="/about" element={<About />} />
           <Route path="/forgotpass" element={<ForgotPassword />} />
+          <Route path="/newpassword" element={<NewPassword />} />
+          <Route path="/code" element={<CodeCheck />} />
         </Routes>
       </Layout>
     </Router>
