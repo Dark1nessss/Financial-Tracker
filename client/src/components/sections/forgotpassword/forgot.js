@@ -79,7 +79,7 @@ function ForgotPassword() {
             </p>
             <div className="flex flex-col items-center space-y-4">
               <input
-                type="password"
+                type="text"
                 placeholder="New Password"
                 className="w-full max-w-2xl px-6 py-4 text-lg rounded-full bg-[#2C2C2C] text-[#C4C4C4] placeholder-[#6B7280] focus:outline-none"
               />
