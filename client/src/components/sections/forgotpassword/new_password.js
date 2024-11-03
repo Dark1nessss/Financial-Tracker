@@ -65,7 +65,7 @@ const NewPassword = () => {
         <h2 className="text-5xl font-bold text-[#A5E404] mb-8">Nova Senha</h2>
         {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
         <p className="text-[#C4C4C4] mb-8">
-          Insira uma nova senha e salve-a em algum lugar seguro!
+          Please insert a new password, don't forget to save it somewhere!
         </p>
         <div className="flex flex-col items-center space-y-4">
           <input
@@ -86,7 +86,13 @@ const NewPassword = () => {
             onClick={handleSetPassword}
             className="w-5/12 py-3 rounded-full bg-[#a5e404] text-black hover:bg-[#93c603] transition"
           >
-            Redefinir senha
+            Set new password!
+          </button>
+          <button
+            type="button"
+            className="w-5/12 py-3 rounded-full bg-[#2C2C2C] text-[#C4C4C4] hover:bg-[#3a3a3a] transition"
+          >
+            Generate a new password!
           </button>
         </div>
       </div>
