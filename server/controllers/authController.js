@@ -113,10 +113,11 @@ exports.forgotPassword = async (req, res, next) => {
 };
 
 exports.resetPassword = async (req, res, next) => {
-  // get user based on the token
+  // get user based on the
+  let token_body = req.body.token || req.params.token;
   const hashedToken = crypto
     .createHash("sha256")
-    .update(req.params.token)
+    .update(token_body)
     .digest("hex");
   const user = await User.findOne({
     passwordResetToken: hashedToken,
@@ -144,4 +145,24 @@ exports.resetPassword = async (req, res, next) => {
     status: "success",
     token,
   });
+};
+
+exports.verifyResetToken = async (req, res) => {
+  try {
+    const { token } = req.body;
+    const hashedToken = crypto.createHash("sha256").update(token).digest("hex");
+
+    const user = await User.findOne({
+      passwordResetToken: hashedToken,
+      passwordResetExpires: { $gt: Date.now() },
+    });
+
+    if (!user) {
+      return res.status(400).json({ message: "Token inválido ou expirado" });
+    }
+
+    res.status(200).json({ message: "Token verificado com sucesso" });
+  } catch (err) {
+    res.status(500).json({ message: "Erro no servidor ao verificar o token" });
+  }
 };
