@@ -4,7 +4,9 @@ const UseCases = () => {
   return (
     <section className="use-cases-section text-white lg:ml-16 py-8">
         <div className="lg:px-56 px-6">
-          <h2 className="text-4xl font-bold mb-6 text-[#A5E404]">Use Cases</h2>
+        <h2 className="text-5xl font-bold mb-6">
+              Use <span className="text-[#A5E404]">Cases</span>
+            </h2>
           <p className="text-lg mb-12 max-w-4xl">
             At YourBank, we cater to the diverse needs of individuals and businesses alike, offering a wide range of financial solutions.
           </p>
