@@ -28,14 +28,17 @@ const sendEmail = async (options) => {
             margin: auto;
             background-color: #1c1c1c;
             color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
           }
           .header {
             background-color: #1c1c1c;
             text-align: center;
-            padding: 20px;
+            padding: 30px 20px;
           }
           .header img {
-            width: 120px;
+            width: 50px;
             height: auto;
             transition: transform 0.3s;
             display: block;
@@ -45,16 +48,21 @@ const sendEmail = async (options) => {
             transform: rotate(45deg);
           }
           .content {
-            padding: 20px;
+            padding: 20px 30px;
           }
           .content h2 {
             color: #C1F000;
+            font-size: 24px;
+            margin-bottom: 10px;
           }
           .content p {
-            color: #ffffff;
+            color: #e0e0e0;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
           }
           .footer {
-            padding: 20px;
+            padding: 20px 30px;
             background-color: #191919;
             color: #ffffff;
             text-align: center;
@@ -63,6 +71,13 @@ const sendEmail = async (options) => {
           .footer a {
             color: #C1F000;
             text-decoration: none;
+            margin: 0 5px;
+          }
+          .footer p {
+            margin: 10px 0;
+          }
+          .social-icons {
+            margin-top: 10px;
           }
           .social-icons a {
             margin: 0 5px;
@@ -82,7 +97,7 @@ const sendEmail = async (options) => {
         <div class="email-container">
           <!-- Logo and Header -->
           <div class="header">
-            <img src="https://imgur.com/3iiC25y" alt="YourBanK Logo" />
+            <img src="https://lh3.googleusercontent.com/d/1Y504k4tXRBQU5awKgL3SZSPEFiG1i-JL" alt="YourBanK Logo" />
           </div>
 
           <!-- Content Section -->
@@ -103,9 +118,9 @@ const sendEmail = async (options) => {
               <a href="${process.env.BASE_URL}/terms-of-service">Terms of Service</a>
             </p>
             <div class="social-icons">
-              <a href="https://facebook.com"><img src="https://i.imgur.com/hCRx3uN.png" alt="Facebook" /></a>
-              <a href="https://twitter.com"><img src="https://i.imgur.com/q4Js4Ul.png" alt="Twitter" /></a>
-              <a href="https://linkedin.com"><img src="https://i.imgur.com/ZnavFs1.png" alt="LinkedIn" /></a>
+              <a href="https://facebook.com"><img src="https://lh3.googleusercontent.com/d/1_TzAccaEy8O5JRrYwU72_OdyN5KevOTB" alt="Facebook" /></a>
+              <a href="https://twitter.com"><img src="https://lh3.googleusercontent.com/d/1xD2ZFXEd5YVMyWdfzJ7rYBrCmOOn7ML_" alt="Twitter" /></a>
+              <a href="https://linkedin.com"><img src="https://lh3.googleusercontent.com/d/1omo8c_5S9pG2-0jIzhZt2kglRfTTYy4W" alt="LinkedIn" /></a>
             </div>
             <p>Need assistance? <a href="mailto:support@yourbank.pt">Contact Us</a></p>
           </div>
