@@ -60,7 +60,7 @@ exports.login = async (req, res) => {
     }
 
     const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, {
-      expiresIn: "1h",
+      expiresIn: "1m", // meti 1 minuto para testar, se queres meter 30 minutos, mete 30m, se for 1 hora, metes 1h, se for 30 dias, metes 30d
     });
     res.json({ token });
   } catch (err) {
