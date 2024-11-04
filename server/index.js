@@ -1,8 +1,9 @@
-const express = require('express');
-const cors = require('cors');
-const connectDB = require('./config/db');
-const dotenv = require('dotenv');
-const authRoutes = require('./routes/authRoutes');
+const express = require("express");
+const cors = require("cors");
+const connectDB = require("./config/db");
+const dotenv = require("dotenv");
+const authRoutes = require("./routes/authRoutes");
+const testRoutes = require("./routes/testRoutes");
 
 dotenv.config();
 
@@ -18,7 +19,10 @@ app.use(express.json());
 app.use(cors());
 
 // Usar as rotas de autenticação
-app.use('/api/auth', authRoutes);
+app.use("/api/auth", authRoutes);
+
+// Testing Purposes
+app.use("/api/test", testRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
