@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
+import { jwtDecode } from "jwt-decode";
 
 const Test = () => {
   const navigate = useNavigate();
@@ -8,6 +9,23 @@ const Test = () => {
     localStorage.removeItem("token");
     navigate("/login");
   };
+  
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      handleLogout();
+      return;
+    }
+    const decodedToken = jwtDecode(token);
+    const expirationTime = decodedToken.exp * 1000;
+    const timeUntilExpiration = expirationTime - Date.now();
+    if (timeUntilExpiration <= 0) {
+      handleLogout();
+    } else {
+      const logoutTimer = setTimeout(handleLogout, timeUntilExpiration);
+      return () => clearTimeout(logoutTimer);
+    }
+  }, [navigate]);
 
   return (
     <section className="flex justify-center items-center py-16">
