@@ -37,7 +37,12 @@ exports.register = async (req, res) => {
     const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, {
       expiresIn: "1h",
     });
-    res.json({ token });
+    res.json({
+      username: user.username,
+      email: user.email,
+      role: user.role,
+      token,
+    });
   } catch (err) {
     console.error(err);
     res.status(500).send("Erro no servidor");
@@ -62,7 +67,12 @@ exports.login = async (req, res) => {
     const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, {
       expiresIn: "30m", // 30m until jwt token expires
     });
-    res.json({ token });
+    res.json({
+      username: user.username,
+      email: user.email,
+      role: user.role,
+      token,
+    });
   } catch (err) {
     console.error(err);
     res.status(500).send("Erro no servidor");
