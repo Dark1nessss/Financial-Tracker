@@ -42,7 +42,9 @@ function Login() {
       const data = await response.json();
 
       if (response.ok) {
+        console.log(data);
         localStorage.setItem("token", data.token);
+        localStorage.setItem("role", data.role); // pegar a role do utilizadr
         navigate("/dashboard");
       } else {
         setError(data.message || "Erro no login");

@@ -46,3 +46,16 @@ exports.protect = async (req, res, next) => {
   req.user = freshUser;
   next();
 };
+
+exports.restrictTo = (...roles) => {
+  return (req, res, next) => {
+    // roles ['admin', 'supporter']. role='user'
+    if (!roles.includes(req.user.role)) {
+      return res.status(403).json({
+        status: "fail",
+        message: "You do not have permission to perform this action",
+      });
+    }
+    next();
+  };
+};

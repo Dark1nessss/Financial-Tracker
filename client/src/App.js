@@ -13,6 +13,8 @@ import NewPassword from "./pages/NewPassword";
 import CodeCheck from "./pages/CodeCheck";
 import Layout from "./components/layout/Layout";
 import ProtectedRoute from "./components/ProtectedRoute";
+import AdminRoute from "./components/AdminRoute";
+import AdminPage from "./pages/AdminPage";
 
 function App() {
   return (
@@ -29,8 +31,16 @@ function App() {
           <Route path="/forgotpass" element={<ForgotPassword />} />
           <Route path="/newpassword" element={<NewPassword />} />
           <Route path="/code" element={<CodeCheck />} />
+          {/* TODO adicionar uma pagina a avisar not-authorized*/}
+
+          {/* Protected routes*/}
           <Route path="/dashboard" element={<ProtectedRoute />}>
             <Route index element={<Dashboard />} />
+          </Route>
+
+          {/* Admin routes */}
+          <Route element={<AdminRoute />}>
+            <Route path="/admin" element={<AdminPage />} />
           </Route>
         </Routes>
       </Layout>
