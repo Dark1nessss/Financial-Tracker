@@ -15,6 +15,7 @@ import Layout from "./components/layout/Layout";
 import ProtectedRoute from "./components/ProtectedRoute";
 import AdminRoute from "./components/AdminRoute";
 import AdminPage from "./pages/AdminPage";
+import ErrorPage from "./pages/404";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/forgotpass" element={<ForgotPassword />} />
           <Route path="/newpassword" element={<NewPassword />} />
           <Route path="/code" element={<CodeCheck />} />
+          <Route path="/404" element={<ErrorPage/>}/>
           {/* TODO adicionar uma pagina a avisar not-authorized*/}
 
           {/* Protected routes*/}
