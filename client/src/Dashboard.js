@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import DashboardPage from "./pages/Dashboard";
-import Layout from "./components/layout/Layout"; // Mudar aqui o layout, criar um novo layout
+import Layout from "./components/layout/Layout"; // Change here layout, create a new layout
 import ProtectedRoute from "./components/ProtectedRoute";
 import AdminRoute from "./components/AdminRoute";
 import AdminPage from "./pages/AdminPage";
