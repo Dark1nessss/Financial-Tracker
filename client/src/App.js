@@ -12,6 +12,7 @@ import ForgotPassword from "./pages/ForgotPassword";
 import NewPassword from "./pages/NewPassword";
 import CodeCheck from "./pages/CodeCheck";
 import Layout from "./components/layout/Layout";
+import Layout2 from "./components/layout/Layout2";
 import ProtectedRoute from "./components/ProtectedRoute";
 import AdminRoute from "./components/AdminRoute";
 import AdminPage from "./pages/AdminPage";
@@ -23,8 +24,9 @@ import ErrorPage500 from "./pages/500";
 function App() {
   return (
     <Router>
-      <Layout>
-        <Routes>
+      <Routes>
+        {/* Main layout routes */}
+        <Route element={<Layout />}>
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
@@ -35,22 +37,26 @@ function App() {
           <Route path="/forgotpass" element={<ForgotPassword />} />
           <Route path="/newpassword" element={<NewPassword />} />
           <Route path="/code" element={<CodeCheck />} />
-          <Route path="/403" element={<ErrorPage403/>}/>
-          <Route path="/404" element={<ErrorPage404/>}/>
-          <Route path="/500" element={<ErrorPage500/>}/>
-          {/* TODO adicionar uma pagina a avisar not-authorized*/}
+        </Route>
 
-          {/* Protected routes*/}
+        {/* Error layout routes */}
+        <Route element={<Layout2 />}>
+          <Route path="/403" element={<ErrorPage403 />} />
+          <Route path="/404" element={<ErrorPage404 />} />
+          <Route path="/500" element={<ErrorPage500 />} />
+          
+          {/* Dashboard Page */}
           <Route path="/dashboard" element={<ProtectedRoute />}>
             <Route index element={<Dashboard />} />
           </Route>
 
-          {/* Admin routes */}
+          {/* Admin Route */}
           <Route element={<AdminRoute />}>
             <Route path="/admin" element={<AdminPage />} />
           </Route>
-        </Routes>
-      </Layout>
+
+        </Route>
+      </Routes>
     </Router>
   );
 }
