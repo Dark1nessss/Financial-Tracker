@@ -1,41 +1,17 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-  const [activeLink, setActiveLink] = useState(location.pathname);
-  const [indicatorStyle, setIndicatorStyle] = useState({});
-  const linksRef = useRef([]);
-
-  useEffect(() => {
-    setActiveLink(location.pathname);
-  }, [location]);
-
-  useEffect(() => {
-    const activeIndex = linksRef.current.findIndex(link => link.pathname === activeLink);
-    if (activeIndex !== -1 && linksRef.current[activeIndex]) {
-      const linkElement = linksRef.current[activeIndex];
-      setIndicatorStyle({
-        width: `${linkElement.offsetWidth}px`,
-        left: `${linkElement.offsetLeft}px`,
-        backgroundColor: '#2E2E2E',
-        opacity: 0.5,
-        height: '150%',
-        borderRadius: '8px',
-      });
-    }
-  }, [activeLink]);
 
   return (
-    <header className="bg-[#141313]">
+    <header className='bg-[#141313]'>
       <nav className="bg-[#1c1c1c] py-4 px-8 flex justify-between items-center rounded-full max-w-7xl mx-auto shadow-lg mt-6 relative">
         {/* Icon */}
         <div className="flex items-center">
           <img src="/logo.png" alt="YourBank Logo" className="h-6 mr-4 transform transition-transform duration-300 hover:rotate-45" />
-          <span className="text-[#C1F000] text-2xl font-bold">
-            Your<span className="text-white text-2xl font-bold">BanK</span>
-          </span>
+          <span className="text-[#C1F000] text-2xl font-bold">Your<span className="text-white text-2xl font-bold">BanK</span></span>
         </div>
 
         {/* Icon for Mobile Menu */}
@@ -46,21 +22,14 @@ function Navbar() {
         </button>
 
         {/* Links and Navigation - Mobile & Desktop */}
-        <ul className={`md:flex text-white items-center space-x-6 ${isOpen ? 'block' : 'hidden'} md:block relative`}>
-          {/* Sliding Indicator */}
-          <div
-            className="absolute transition-all duration-300"
-            style={indicatorStyle}
-          ></div>
-
-          {/* Menu Items */}
+        <ul className={`md:flex text-white items-center ${isOpen ? 'block' : 'hidden'} md:block`}>
           {['/', '/careers', '/about', '/security'].map((path, index) => (
             <li key={path}>
               <Link
                 to={path}
-                ref={el => (linksRef.current[index] = el)}
-                className={`py-2 px-4 rounded-full transition-colors duration-300 ${activeLink === path ? 'text-white' : 'hover:text-[#C1F000]'}`}
-                onClick={() => setActiveLink(path)}
+                className={`py-2 px-4 rounded-lg transition-colors duration-300 ${
+                  location.pathname === path ? 'bg-[#2E2E2E] text-white' : 'hover:text-[#C1F000]'
+                }`}
               >
                 {path === '/' ? 'Home' : path.slice(1).charAt(0).toUpperCase() + path.slice(2)}
               </Link>
