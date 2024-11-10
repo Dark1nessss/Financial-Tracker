@@ -151,9 +151,6 @@ function Register() {
             <img src="/google_ico.png" alt="Google" className="h-20 w-20" />
           </button>
           <button className="rounded-full shadow-lg transition duration-300 hover:shadow-[0_0_20px_#A5E404]">
-            <img src="/facebook_ico.png" alt="Facebook" className="h-20 w-20" />
-          </button>
-          <button className="rounded-full shadow-lg transition duration-300 hover:shadow-[0_0_20px_#A5E404]">
             <img src="/apple_ico.png" alt="Apple" className="h-20 w-20" />
           </button>
         </div>
