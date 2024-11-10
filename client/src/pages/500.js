@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import 'particles.js';
 
 const ErrorPage = () => {
@@ -113,6 +114,11 @@ const ErrorPage = () => {
             ERROR
           </span>
         </p>
+        <Link to="/" className="mt-8 inline-block z-10 relative">
+          <button className="bg-gradient-to-r from-[#71b7e6] via-[#69a6ce] to-[#ee8176] text-white text-lg font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+            Go Back to Home Page
+          </button>
+        </Link>
       </div>
       <div id="particles-js" className="absolute inset-0"></div>
     </div>
