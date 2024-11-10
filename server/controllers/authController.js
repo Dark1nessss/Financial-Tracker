@@ -33,6 +33,10 @@ exports.register = async (req, res) => {
     });
 
     await user.save();
+
+    const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, {
+      expiresIn: "30m",
+    });
     res.json({
       username: user.username,
       email: user.email,
